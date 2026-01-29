@@ -1,26 +1,175 @@
-<h3>Community Interest</h3>
- 
-<p class="small">
- This project is being shared person-to-person.  
- Support shown here helps us understand momentum — nothing more.
-</p>
- 
-<button class="btn" id="supportBtn" style="background:#111;">
- I Support This Mission
-</button>
- 
-<p class="small" style="margin-top:10px;">
- Local support clicks (this device only): <strong id="supportCount">0</strong>
-</p>
- 
-<div class="divider"></div>
- 
-<h3>Open Comments</h3>
-<p class="small">
- If you’d like to share thoughts, questions, or feedback, you may do so publicly below.
- <br>
- No emails collected. No private data stored.
-</p>
- 
-<!-- Utterances Comment System -->
-<script src="https://utteranc.es/client.js
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>TNSF Trust Coin — True North Strong and Free</title>
+  <style>
+    :root{
+      --bg:#0b0b0f; --card:#11131a; --text:#f5f7ff; --muted:#b8bfd6;
+      --line:rgba(255,255,255,.12); --accent:#c4001a;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      background: radial-gradient(1200px 600px at 50% -10%, rgba(196,0,26,.35), transparent 60%),
+                  radial-gradient(1000px 600px at 10% 10%, rgba(255,255,255,.10), transparent 55%),
+                  var(--bg);
+      color:var(--text); line-height:1.55;
+    }
+    .wrap{max-width:980px;margin:0 auto;padding:0 18px}
+    header{
+      padding:54px 0 28px; text-align:center;
+      border-bottom:1px solid var(--line);
+    }
+    .tag{
+      display:inline-block; padding:8px 12px; border:1px solid var(--line);
+      border-radius:999px; color:var(--muted); font-size:12px; letter-spacing:.8px;
+      background:rgba(0,0,0,.25)
+    }
+    h1{
+      margin:14px 0 8px; font-size:32px; letter-spacing:1px; text-transform:uppercase;
+    }
+    .sub{font-size:18px; font-weight:800; margin:0 0 10px}
+    .lead{color:var(--muted); max-width:860px; margin:0 auto}
+    .ctaRow{display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:18px}
+    .btn{
+      border:0; cursor:pointer; font-weight:900; border-radius:12px;
+      padding:12px 16px; color:white; background:var(--accent);
+    }
+    .btn.secondary{background:rgba(255,255,255,.08); border:1px solid var(--line)}
+    main{padding:26px 0 48px}
+    .grid{display:grid; gap:14px}
+    @media(min-width:900px){.grid.two{grid-template-columns:1fr 1fr}}
+    .card{
+      background:rgba(17,19,26,.8);
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:18px;
+      backdrop-filter: blur(6px);
+    }
+    h2{margin:0 0 10px; font-size:22px}
+    ul{margin:0; padding-left:18px}
+    li{margin:8px 0; color:var(--muted)}
+    .small{font-size:12px; color:var(--muted)}
+    .divider{height:1px;background:var(--line); margin:18px 0}
+    footer{
+      border-top:1px solid var(--line);
+      padding:18px 0 28px; color:var(--muted); font-size:12px;
+      text-align:center;
+    }
+    .count{
+      margin-top:10px; font-weight:900; font-size:14px;
+      color:#fff;
+    }
+    .pill{
+      display:inline-block; padding:6px 10px; border-radius:999px;
+      border:1px solid var(--line); color:var(--muted); font-size:12px;
+      background:rgba(0,0,0,.22)
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <span class="tag">CANADIAN • TRUST-GOVERNED • SOCIAL IMPACT</span>
+      <h1>TRUE NORTH STRONG AND FREE</h1>
+      <p class="sub">Built to honour those who serve.</p>
+      <p class="lead">
+        TNSF is a Canadian social trust coin created to stand beside first responders, wildfire fighters, veterans,
+        and those who carry the weight of service. No hype. No unrealistic assurances. Just trust.
+      </p>
+
+      <div class="ctaRow">
+        <button class="btn" id="supportBtn">I Support This Mission</button>
+        <a class="btn secondary" href="#about" style="text-decoration:none;color:white">Learn More</a>
+      </div>
+
+      <p class="small" style="margin-top:12px">
+        No obligation. No spam. Clicking “Support” helps measure community interest on <em>this device</em>.
+      </p>
+      <div class="count" id="countText"></div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="grid two" id="about">
+      <div class="card">
+        <h2>Why TNSF Exists</h2>
+        <p class="small" style="font-size:14px">
+          TNSF exists to advance mental health, recovery, and long-term resilience for those who protect our communities.
+          This is not a promise of profit — it is a commitment to transparency, trust, and social good.
+        </p>
+        <div class="divider"></div>
+        <span class="pill">Trust in Canada</span>
+        <span class="pill">Trust in people</span>
+        <span class="pill">Trust in the future</span>
+      </div>
+
+      <div class="card">
+        <h2>What TNSF Is</h2>
+        <ul>
+          <li>Trust-governed structure with clear rules</li>
+          <li>Transparency-first approach from day one</li>
+          <li>Built to support Canadians and those who served</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="grid two" style="margin-top:14px">
+      <div class="card">
+        <h2>What TNSF Is Not</h2>
+        <ul>
+          <li>Not a promise of returns</li>
+          <li>Not a speculative investment product</li>
+          <li>Not controlled by hidden parties</li>
+        </ul>
+        <p class="small">
+          TNSF is presented as a social initiative and community mission. Always do your own research and comply with local laws.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Founder Commitment</h2>
+        <p class="small" style="font-size:14px">
+          TNSF was founded by <strong>Travis Rinas</strong> with one guiding rule: trust must be earned and protected.
+          Governance rules are defined, authority is constrained, and oversight is built in from the start.
+          No hype. No ego. Just accountability.
+        </p>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top:14px">
+      <h2>Community & Conversation</h2>
+      <p class="small" style="font-size:14px">
+        TNSF is being built in the open. Community spaces are forming to allow respectful discussion, questions, and feedback.
+        More coming soon.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 TNSF Trust Coin — Canadian initiative focused on transparency, trust, and social good.
+  </footer>
+
+<script>
+  // Local, device-only interest counter (free, no email, no tracking)
+  const KEY = "tnsf_support_count_v1";
+  const btn = document.getElementById("supportBtn");
+  const out = document.getElementById("countText");
+
+  function render(){
+    const n = parseInt(localStorage.getItem(KEY) || "0", 10);
+    out.textContent = n > 0 ? ("Support clicks on this device: " + n) : "";
+  }
+  btn.addEventListener("click", () => {
+    const n = parseInt(localStorage.getItem(KEY) || "0", 10) + 1;
+    localStorage.setItem(KEY, String(n));
+    render();
+    btn.textContent = "Thank you — standing together 🇨🇦";
+    setTimeout(()=> btn.textContent = "I Support This Mission", 2200);
+  });
+  render();
+</script>
+</body>
+</html>
