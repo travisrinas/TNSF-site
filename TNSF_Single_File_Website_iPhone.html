@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TNSF Trust Coin – True North Strong and Free</title>
+<style>
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  color:#111;
+  line-height:1.5;
+}
+header{
+  padding:40px 20px;
+  text-align:center;
+  background:#000;
+  color:#fff;
+}
+header h1{
+  margin:0;
+  font-size:32px;
+  letter-spacing:1px;
+}
+header p{
+  max-width:700px;
+  margin:15px auto 0;
+  font-size:16px;
+}
+section{
+  padding:40px 20px;
+  max-width:900px;
+  margin:auto;
+}
+h2{
+  font-size:24px;
+  margin-bottom:10px;
+}
+.card{
+  border:1px solid #ddd;
+  border-radius:12px;
+  padding:20px;
+  margin-bottom:20px;
+}
+button{
+  padding:14px 20px;
+  font-size:16px;
+  border-radius:10px;
+  border:none;
+  background:#c4001a;
+  color:white;
+}
+input, textarea, select{
+  width:100%;
+  padding:12px;
+  margin-top:8px;
+  margin-bottom:16px;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+footer{
+  padding:30px 20px;
+  text-align:center;
+  font-size:12px;
+  color:#555;
+  border-top:1px solid #ddd;
+}
+.small{
+  font-size:13px;
+  color:#555;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>TRUE NORTH STRONG AND FREE</h1>
+  <p>
+    TNSF Trust Coin is a Canadian, trust‑governed social utility token created to support
+    first responders, wildfire fighters, veterans, and retired members.
+    <br><br>
+    <strong>This is not an investment. This is a commitment.</strong>
+  </p>
+</header>
+
+<section>
+  <h2>Why TNSF Exists</h2>
+  <div class="card">
+    <p>
+      If you have served on the front line or carried the weight long after retirement,
+      TNSF exists to support mental health, recovery, and long‑term resilience.
+      <br><br>
+      No hype. No profit promises. No hidden control.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2>What Is TNSF?</h2>
+  <div class="card">
+    <ul>
+      <li>Canadian trust‑governed digital token</li>
+      <li>Built on the XRP Ledger</li>
+      <li>Fixed supply: 4,160,000,000 TNSF</li>
+      <li>2.5% transaction fee supports Trust and operations</li>
+      <li>No profit guarantees or returns</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Register Your Interest</h2>
+  <div class="card">
+    <p class="small">
+      This form does not collect money. It only shows interest.
+    </p>
+    <form>
+      <label>Name (optional)</label>
+      <input type="text" placeholder="Your name">
+      <label>Email (optional)</label>
+      <input type="email" placeholder="you@example.com">
+      <label>I am a:</label>
+      <select>
+        <option>First Responder</option>
+        <option>Wildfire / Forestry</option>
+        <option>Veteran / Retired</option>
+        <option>Family / Supporter</option>
+        <option>Other</option>
+      </select>
+      <button type="button" onclick="countInterest()">I'm Interested</button>
+      <p id="count" class="small"></p>
+    </form>
+  </div>
+</section>
+
+<section>
+  <h2>Community Chat</h2>
+  <div class="card">
+    <p>
+      A moderated community space is coming soon.
+      <br><br>
+      This will host discussion, updates, and community voices.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2>Founder Commitment</h2>
+  <div class="card">
+    <p>
+      TNSF was founded by <strong>Travis Rinas</strong> on one principle:
+      trust must be earned.
+      <br><br>
+      Governance is written, power is limited, and transparency is mandatory.
+    </p>
+  </div>
+</section>
+
+<footer>
+  © 2026 TNSF Trust Coin – True North Strong and Free<br>
+  Not an investment product. No promises of returns. Participation is voluntary.
+</footer>
+
+<script>
+function countInterest(){
+  let c = localStorage.getItem("tnsf_interest") || 0;
+  c++;
+  localStorage.setItem("tnsf_interest", c);
+  document.getElementById("count").innerText =
+    "Interest recorded on this device. Total clicks: " + c;
+}
+</script>
+
+</body>
+</html>
